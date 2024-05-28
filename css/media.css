@@ -1,0 +1,73 @@
+/* Для планшетов, ширина которых меньше чем 1200px (в горизонтальном виде)  */
+@media (max-width: 1200px) {
+
+    .container {
+        width: 900px; 
+    }
+
+ 
+}
+
+/* Для планшетов, ширина которых меньше чем 992px (в вертикальном виде) */
+@media (max-width: 992px) {
+    .container {
+        width: 700px;
+    }
+    .box_img{
+        grid-template-columns: repeat(2,1fr);
+    } 
+
+}
+
+/* Для телефонов, ширина меньше чем 768px (в горизонтальном виде) */
+@media (max-width: 768px) {
+    .container {
+        width: 500px;
+    }
+    .section{
+        background: url(../img/img1.jpg) no-repeat center / cover;
+    }
+    .hamburger{
+        display: block;
+    }
+    .menu {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: -100%;
+        background-color: rgba(0, 0, 0, 0.425);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        padding: 50px;
+        transition: 0.4s;
+    }
+    .menu.open{
+        right: 0;
+    }
+    .btn1{
+        display: none;
+    }
+
+    .box_category input, .btn_category{
+        width: 100%;
+    }
+    footer{
+        flex-direction: column;
+        align-items: start;
+        gap: 30px;
+    }
+}
+
+/* Для телефонов, ширина меньше чем 576px (в вертикальном виде) */
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .item1{
+        height: 245px;
+    }
+.name svg{
+    width: 95px;
+}
+}
